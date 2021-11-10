@@ -3,7 +3,7 @@ import "./style.css";
 
 window.onload = function() {
   const values = ["A", "2", "3", "4", "5", "6", "7", "8", "10", "J", "Q", "k"];
-  const suits = ["Hearts", "Diamons", "Spades", "Clubs"];
+  const suits = ["Hearts", "♦", "Spades", "Clubs"];
 
   function randomCard() {
     const randomValue = Math.floor(Math.random() * values.length);
@@ -12,8 +12,8 @@ window.onload = function() {
     const cardSuit = suits[randomSuit];
 
     let entity;
-    if (cardSuit === "Diamonds") {
-      entity = "&diams;";
+    if (cardSuit === "♦") {
+      entity = "♦";
     } else {
       entity = "&" + cardSuit.toLowerCase() + ";";
     }
